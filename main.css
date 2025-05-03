@@ -16,7 +16,7 @@ header {
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  background-image: url("background.jpg");
+  background-image: url("background1.jpg"); /* default image */
   background-size: cover;
   background-position: center;
   position: relative;
@@ -24,6 +24,7 @@ header {
   padding: 50px 20px;
   overflow: hidden;
   animation: fadeIn 2s ease-in-out;
+  transition: background-image 1s ease-in-out;
 }
 
 header:after {
