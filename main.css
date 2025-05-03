@@ -1,0 +1,180 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f4f4f4;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  background-image: url("background.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #fff;
+  padding: 50px 20px;
+  overflow: hidden;
+  animation: fadeIn 2s ease-in-out;
+}
+
+header:after {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  background-color: rgba(34, 34, 34, 0.5);
+}
+
+header .content {
+  position: relative;
+  z-index: 1;
+  padding: 20px;
+}
+
+header .content h1, header .content h2 {
+  white-space: normal;
+  word-break: break-word;
+}
+
+header .content h1 {
+  font-size: 36px;
+  font-weight: 700;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+  animation: textSlide 2s ease-out;
+}
+
+header .content h1 span {
+  font-weight: 400;
+}
+
+header .content h2 {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-style: italic;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+  animation: textSlide 3s ease-out;
+}
+
+@media screen and (min-width: 480px) {
+  header .content h1 {
+    font-size: 48px;
+  }
+  header .content h2 {
+    font-size: 36px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .content h1 {
+    font-size: 56px;
+  }
+  header .content h2 {
+    font-size: 42px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .content h1 {
+    font-size: 64px;
+  }
+  header .content h2 {
+    font-size: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header .content h1 {
+    font-size: 72px;
+  }
+  header .content h2 {
+    font-size: 56px;
+  }
+}
+
+header .content .countdown {
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-top: 30px;
+  padding: 15px 40px;
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  animation: countdownFade 2s ease-in-out;
+}
+
+@media screen and (min-width: 480px) {
+  header .content .countdown {
+    font-size: 56px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  header .content .countdown {
+    font-size: 72px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  header .content .countdown {
+    font-size: 96px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  header .content .countdown {
+    font-size: 120px;
+  }
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes textSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes countdownFade {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
