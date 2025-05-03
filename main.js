@@ -1,3 +1,4 @@
+// Countdown Timer
 let launchDate = new Date("Oct 2, 2025 12:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
@@ -23,6 +24,21 @@ function tick () {
     document.querySelector('.countdown').innerText = time;
   } else {
     clearInterval(timer);
-    document.querySelector('.countdown').innerText = "अब लाइव है!";
+    document.querySelector('.countdown').innerText = "अब LIVE आहे!";
   }
 }
+
+// Background Image Rotator
+const images = [
+  "background1.jpg",
+  "background2.jpg",
+  "background3.jpg",
+  "background4.jpg"
+];
+
+let current = 0;
+
+setInterval(() => {
+  current = (current + 1) % images.length;
+  document.querySelector("header").style.backgroundImage = `url('${images[current]}')`;
+}, 5000); // change every 5 seconds
