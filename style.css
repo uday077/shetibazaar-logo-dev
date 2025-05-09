@@ -6,8 +6,8 @@ body, html {
 
 .banner {
   background-image: url("images/background.jpg");
-  background-size: cover; /* Fill the screen */
-  background-position: center center; /* Center the image */
+  background-size: cover;
+  background-position: center center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
@@ -16,11 +16,40 @@ body, html {
   align-items: center;
 }
 
-/* 🔁 Mobile optimization */
+.text {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5rem;
+  font-weight: 700;
+  background: linear-gradient(45deg, #00ffe7, #00bfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-align: center;
+  letter-spacing: 2px;
+  animation: fadeIn 2s ease-in-out;
+}
+
+/* Animation effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive (Mobile) */
 @media (max-width: 768px) {
   .banner {
     background-size: contain;
     background-position: top;
-    background-repeat: no-repeat;
+  }
+
+  .text {
+    font-size: 2rem;
+    padding: 0 1rem;
+    letter-spacing: 1px;
   }
 }
