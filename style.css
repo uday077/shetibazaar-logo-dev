@@ -1,39 +1,25 @@
-/* Reset default margin */
-body, html {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", sans-serif;
+.logo {
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
-.banner {
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding-top: 35vh; /* push text a bit lower */
-}
-
-.text {
-  color: black;
-  font-size: 3.5rem;
-  font-weight: 700;
+.content {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Responsive text size for small screens */
-@media (max-width: 768px) {
-  .text {
-    font-size: 2.2rem;
+/* Optional: larger spacing on desktop */
+@media (min-width: 769px) {
+  .logo {
+    max-width: 500px;
   }
 
-  .banner {
-    padding-top: 30vh;
-    background-size: contain;
-    background-position: top;
+  .text {
+    margin-top: 20px;
+    font-size: 3rem;
   }
 }
