@@ -1,55 +1,39 @@
+/* Reset default margin */
 body, html {
   margin: 0;
   padding: 0;
-  height: 100%;
+  font-family: "Segoe UI", sans-serif;
 }
 
 .banner {
   background-image: url("images/background.jpg");
   background-size: cover;
-  background-position: center center;
+  background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding-top: 35vh; /* push text a bit lower */
 }
 
 .text {
-  font-family: 'Poppins', sans-serif;
+  color: black;
   font-size: 3.5rem;
   font-weight: 700;
-  background: linear-gradient(45deg, #00ffe7, #00bfff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   text-align: center;
-  letter-spacing: 2px;
-  animation: fadeIn 2s ease-in-out;
 }
 
-/* Animation effect */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive (Mobile) */
+/* Responsive text size for small screens */
 @media (max-width: 768px) {
+  .text {
+    font-size: 2.2rem;
+  }
+
   .banner {
+    padding-top: 30vh;
     background-size: contain;
     background-position: top;
-  }
-
-  .text {
-    font-size: 2rem;
-    padding: 0 1rem;
-    letter-spacing: 1px;
   }
 }
